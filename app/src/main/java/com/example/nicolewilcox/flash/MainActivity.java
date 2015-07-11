@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         noCards(v);
     }
 
-    public void noCards(View v){
+    public void noCards(View v){ // If the user hasn't made any cards, let them know what they should do
         AlertDialog.Builder helpDialog = new AlertDialog.Builder(this);
         helpDialog.setMessage("You don't seem to have any cards! Make some by clicking \"new set\".")
                 .setPositiveButton("Got it!", new DialogInterface.OnClickListener() {
@@ -55,7 +56,4 @@ public class MainActivity extends AppCompatActivity {
         helpDialog.show();
     }
 
-    public void onClickHelp(View v){
-
-    }
 }
